@@ -1,0 +1,142 @@
+/* ================================================
+   responsive.css
+   Complemento responsive para a túa web centrada
+   Autor: ChatGPT
+   ================================================ */
+
+/* 1. Meta recomendación (asegúrate de tela no <head>):
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+*/
+
+/* 2. Container fluído centrado */
+.container {
+  width: 100%;
+  max-width: 1200px; /* límite en pantallas grandes */
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* 3. Imaxes e vídeos adaptables */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4. Tipografía fluída */
+h1 { font-size: clamp(1.6rem, 3vw, 3rem); }
+h2 { font-size: clamp(1.3rem, 2.5vw, 2.2rem); }
+h3 { font-size: clamp(1.1rem, 2vw, 1.6rem); }
+p, li { font-size: clamp(0.95rem, 1.5vw, 1.125rem); line-height: 1.6; }
+
+/* 5. Layout básico (mobile-first) */
+.header, .footer, .main, .nav {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Se tes filas ou columnas, usa flex ou grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.col {
+  flex: 1 1 100%;
+}
+
+/* Tablet: dúas columnas */
+@media (min-width: 768px) {
+  .col-2 { flex: 1 1 calc(50% - 16px); }
+}
+
+/* Escritorio grande: tres columnas */
+@media (min-width: 1200px) {
+  .col-3 { flex: 1 1 calc(33.333% - 16px); }
+}
+
+/* 6. Navegación adaptativa */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Botón de menú hamburguesa (opcional) */
+.nav-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 8px;
+  display: block;
+}
+
+.nav-open .nav-links {
+  display: flex;
+}
+
+/* Mostrar menú horizontal en pantallas medias/grandes */
+@media (min-width: 768px) {
+  .nav-toggle { display: none; }
+  .nav-links {
+    display: flex !important;
+    width: auto;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+/* 7. Imaxes de cabeceira ou sección */
+.hero img, .banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 8. Formularios e botóns */
+input, textarea, select, button {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  padding: 8px;
+}
+
+@media (min-width: 768px) {
+  form .half {
+    width: calc(50% - 8px);
+    display: inline-block;
+  }
+}
+
+/* 9. Axuste de separacións */
+section, article {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  section, article {
+    margin-bottom: 3rem;
+  }
+}
+
+/* 10. Breakpoints para referencia */
+@media (min-width: 480px) { /* móbil grande */ }
+@media (min-width: 768px) { /* tablet */ }
+@media (min-width: 1024px) { /* escritorio pequeno */ }
+@media (min-width: 1200px) { /* escritorio grande */ }
+
+/* ================================================ */

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desde a raia</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/family=Source+Sans+Pro:wght@300;400;600&family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#808000">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="site-header" class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Volver ao inicio — Desde a raia">
+        <img src="assets/images/cabeceira.png" alt="Desde a raia — logotipo" class="logo-img">
+      </a>
+      <button class="menu-trigger" id="menu-trigger" aria-expanded="false" aria-controls="menu-panel" aria-label="Abrir menú">
+        ☰
+      </button>
+    </div>
+
+    <nav id="menu-panel" class="menu-panel" role="navigation" aria-label="Menú principal">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportaxes/modelo-reportaxe.html">Reportaxes</a></li>
+        <li><a href="que-e-desde-a-raia.html">Que é <em>Desde a raia</em></a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="search-container" role="search">
+        <input id="search" type="search" placeholder="Buscar...">
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main" role="main">
+    <!-- Artigo destacado -->
+    <section class="featured reportaxe-hero" id="featured">
+      <a href="reportaxes/modelo-reportaxe.html" class="featured-link" aria-label="Abrir reportaxe: A pesca no río Miño">
+        <img src="assets/images/Reportaxe 1.jpg" alt="Barca no Miño, portada da reportaxe" class="featured-image">
+        <div class="featured-text">
+          <h1 class="featured-title">A pesca no río Miño: O que queda da raia mollada</h1>
+          <h2 class="featured-sub">O río pasa, intemporal como un deus. Pocas cousas hai tan ermosas como o curso do Miño...</h2>
+      </a>
+    </section>
+
+    <!-- Máis reportaxes -->
+    <section class="mais-reportaxes" id="mais-reportaxes" aria-labelledby="mais-reportaxes-title">
+        <div class="news-grid">
+          <article class="news-item">
+            <a href="#" class="news-link">
+              <img src="assets/images/placeholder1.jpg" alt="Imaxe do mercado transfronteirizo">
+              <h3>O mercado transfronteirizo volve en outubro</h3>
+              <p>Os produtores de ambas beiras preparan unha nova edición do mercado conxunto.</p>
+            </a>
+          </article>
+
+          <article class="news-item">
+            <a href="#" class="news-link">
+              <img src="assets/images/placeholder2.jpg" alt="Imaxe do Camiño">
+              <h3>O Camiño Portugués da Costa reforza sinalización</h3>
+              <p>A ruta entre A Guarda e Tui gaña novos paneis e puntos de descanso.</p>
+            </a>
+          </article>
+
+          <article class="news-item">
+            <a href="#" class="news-link">
+              <img src="assets/images/placeholder3.jpg" alt="Imaxe do festival">
+              <h3>Festival da Amizade celebra 25 anos de irmandade</h3>
+              <p>Tui e Valença conmemoran un cuarto de século de colaboración cultural.</p>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="socials">
+        <a href="https://www.facebook.com/desdearaia" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/instagram.png" alt="Instagram">
+        </a>
+        <a class="mail-btn" href="mailto:desdearaia@gmail.com?subject=Contacto%20desde%20a%20web" aria-label="Enviar correo a Desde a raia">
+         <img src="assets/images/correo.png" alt="Correo">
+        </a>
+    </div>
+    <div class="copyright">
+      <small>© 2025 Desde a raia</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
