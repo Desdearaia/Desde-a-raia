@@ -78,15 +78,19 @@ if (contactForm) {
 
 
 // --- MODAL IMAXE
-const featuredImg = document.getElementById('featured-img');
-const modal = document.getElementById('modal-img');
-const modalImg = modal.querySelector('img');
+document.addEventListener("DOMContentLoaded", () => {
+  const featuredImg = document.getElementById('featured-img');
+  const modal = document.getElementById('modal-img');
+  const modalImg = modal.querySelector('img');
 
-featuredImg.addEventListener('click', () => {
-  modal.style.display = 'flex';
-  modalImg.src = featuredImg.src;
-});
+  if(featuredImg && modal && modalImg){
+    featuredImg.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = featuredImg.src;
+    });
 
-modal.addEventListener('click', () => {
-  modal.style.display = 'none';
+    modal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
 });
