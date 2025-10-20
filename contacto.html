@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="gl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto — Desde a raia</title>
 
   <!-- Fonts -->
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#808000">
 </head>
-<body>
+<body class="page-green contacto">
 
   <!-- HEADER -->
   <header id="site-header" class="site-header" role="banner">
@@ -37,25 +37,37 @@
 
   <!-- MAIN -->
   <main>
-    <section class="page-green contacto">
-      <div class="container">
-        <h1>Contacto</h1>
+    <section class="page-green">
+      <div class="container page-content">
+        <h1 class="page-title">Contacto</h1>
+
         <p>
-          Pra calquera dúbida, proposta ou comentario, podes poñerte en contacto comigo:
+          Olá! Son <strong>María Patricio</strong> e este é o espazo de contacto de <em>Desde a raia</em>.  
+          Estarei encantada de recibir calquera mensaxe, suxestión ou pregunta que queiras enviar.
         </p>
+
         <p>
-          <strong>María Patricio</strong><br>
-          <a href="mailto:desdearaia@gmail.com" style="color: var(--amarelo); text-decoration: underline;">desdearaia@gmail.com</a>
+          Podes escribirme directamente a: 
+          <a href="mailto:desdearaia@gmail.com" style="color: var(--amarelo); text-decoration: underline;">
+            desdearaia@gmail.com
+          </a>
         </p>
+
         <p>
-          Estarei encantada de recibir a túa mensaxe e responderche o antes posible. Grazas por interesarte en <em>Desde a raia</em>!
+          Prometo ler cada mensaxe e responder o antes posible. Grazas por confiar en <em>Desde a raia</em>!
         </p>
+
+        <div style="margin-top: 2rem; text-align:center;">
+          <button style="padding:1rem 2rem; font-family: 'League Spartan', sans-serif; font-weight:700; background-color: var(--amarelo); color: var(--verde); border:none; border-radius:6px; cursor:pointer;">
+            Enviar correo desde o teu cliente
+          </button>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo" style="background-color: #ffffff; color: var(--verde);">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer-inner container">
       <div class="socials">
         <a href="https://www.facebook.com/desdearaia" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -64,7 +76,7 @@
         <a href="https://www.instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <img src="assets/images/instagram.png" alt="Instagram">
         </a>
-        <a class="mail-btn" href="mailto:desdearaia@gmail.com" aria-label="Enviar correo a Desde a raia">
+        <a class="mail-btn" href="mailto:desdearaia@gmail.com?subject=Contacto%20desde%20a%20web" aria-label="Enviar correo a Desde a raia">
          <img src="assets/images/correo.png" alt="Correo">
         </a>
       </div>

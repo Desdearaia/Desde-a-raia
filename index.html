@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#808000">
 </head>
-<body>
+<body class="index-page">
 
   <!-- HEADER -->
   <header id="site-header" class="site-header" role="banner">
@@ -40,47 +40,50 @@
   </header>
 
   <!-- MAIN -->
-  <main id="main" role="main">
-    <!-- Artigo destacado -->
-    <section class="featured reportaxe-hero" id="featured">
-    <a href="reportaxes/modelo-reportaxe.html" class="featured-link" aria-label="Abrir reportaxe: A pesca no río Miño">
-  <img src="assets/images/Reportaxe1.jpg" alt="Barca no Miño, portada da reportaxe" class="featured-image">
-  <div class="featured-text">
-    <h1 class="featured-title">A pesca no río Miño: O que queda da raia mollada</h1>
-    <h2 class="featured-sub">O río pasa, intemporal como un deus. Pocas cousas hai tan ermosas como o curso do Miño...</h2>
-  </div>
-</a>
-    </section>
+  <main>
+    <div class="container index-grid">
 
-    <!-- Máis reportaxes -->
-    <section class="mais-reportaxes" id="mais-reportaxes" aria-labelledby="mais-reportaxes-title">
-        <div class="news-grid">
-          <article class="news-item">
-            <a href="#" class="news-link">
-              <img src="assets/images/Reportaxe2.jpg" alt="Imaxe do mercado transfronteirizo">
-              <h3>O mercado transfronteirizo volve en outubro</h3>
-              <p>Os produtores de ambas beiras preparan unha nova edición do mercado conxunto.</p>
-            </a>
-          </article>
+      <!-- Noticias secundarias á esquerda -->
+      <div class="news-side">
+        <article class="news-item">
+          <p class="news-date">15/10/2025</p>
+          <h3>O mercado transfronteirizo volve en outubro</h3>
+          <p>Os produtores de ambas beiras preparan unha nova edición do mercado conxunto.</p>
+        </article>
 
-          <article class="news-item">
-            <a href="#" class="news-link">
-              <img src="assets/images/Reportaxe3.jpg" alt="Imaxe do Camiño">
-              <h3>O Camiño Portugués da Costa reforza sinalización</h3>
-              <p>A ruta entre A Guarda e Tui gaña novos paneis e puntos de descanso.</p>
-            </a>
-          </article>
+        <article class="news-item">
+          <p class="news-date">12/10/2025</p>
+          <h3>O Camiño Portugués da Costa reforza sinalización</h3>
+          <p>A ruta entre A Guarda e Tui gaña novos paneis e puntos de descanso.</p>
+        </article>
 
-          <article class="news-item">
-            <a href="#" class="news-link">
-              <img src="assets/images/Reportaxe4.jpg" alt="Imaxe do festival">
-              <h3>Festival da Amizade celebra 25 anos de irmandade</h3>
-              <p>Tui e Valença conmemoran un cuarto de século de colaboración cultural.</p>
-            </a>
-          </article>
+        <article class="news-item">
+          <p class="news-date">10/10/2025</p>
+          <h3>Festival da Amizade celebra 25 anos de irmandade</h3>
+          <p>Tui e Valença conmemoran un cuarto de século de colaboración cultural.</p>
+        </article>
+      </div>
+
+      <!-- Reportaxe central -->
+      <div class="featured-central">
+        <a href="reportaxes/modelo-reportaxe.html" class="featured-link" aria-label="Abrir reportaxe: A pesca no río Miño">
+          <img src="assets/images/Reportaxe1.jpg" alt="Barca no Miño, portada da reportaxe" class="featured-image">
+          <div class="featured-text">
+            <h1 class="featured-title">A pesca no río Miño: O que queda da raia mollada</h1>
+            <h2 class="featured-sub">O río pasa, intemporal como un deus. Pocas cousas hai tan ermosas como o curso do Miño...</h2>
+          </div>
+        </a>
+      </div>
+
+      <!-- Contedor Facebook á dereita -->
+      <div class="facebook-side">
+        <h3>Facebook Desde a raia</h3>
+        <div class="fb-placeholder">
+          Embed de Facebook simulado aquí
         </div>
       </div>
-    </section>
+
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -96,13 +99,13 @@
         <a class="mail-btn" href="mailto:desdearaia@gmail.com?subject=Contacto%20desde%20a%20web" aria-label="Enviar correo a Desde a raia">
          <img src="assets/images/correo.png" alt="Correo">
         </a>
-    </div>
-    <div class="copyright">
-      <small>© 2025 Desde a raia</small>
+      </div>
+      <div class="copyright">
+        <small>© 2025 Desde a raia</small>
+      </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="script.js" defer></script>
 </body>
 </html>
