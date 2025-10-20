@@ -35,20 +35,20 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
-  <main id="main" role="main">
+ <!-- MAIN -->
+<main id="main" role="main">
   <section class="featured reportaxe-hero" aria-labelledby="reportaxe-title">
     <div class="featured-image-container">
-      <div id="modal-img">
-  <img src="../assets/images/Reportaxe1.jpg?v=1" alt="Barca no Miño, portada da reportaxe" class="featured-image">
-  <div class="featured-text">
-    <h1 class="featured-title">A pesca no río Miño: O que queda da raia mollada</h1>
-    <h2 class="featured-sub">O río pasa, intemporal como un deus. Pocas cousas hai tan ermosas como o curso do Miño...</h2>
-  </div>
-   </div>
+      <img src="../assets/images/Reportaxe1.jpg" alt="Barca no Miño, portada da reportaxe" class="featured-image" id="featured-img">
+      <div class="featured-text">
+        <h1 class="featured-title">A pesca no río Miño: O que queda da raia mollada</h1>
+        <h2 class="featured-sub">O río pasa, intemporal como un deus. Pocas cousas hai tan ermosas como o curso do Miño...</h2>
+      </div>
     </div>
-</a>
-    </section>
+  </section>
+
+  <article class="reportaxe">
+    <div class="container">
 
     <article class="reportaxe">
       <div class="container">
@@ -111,5 +111,29 @@
   </footer>
 
   <script src="../script.js" defer></script>
+
+  <!-- Modal para ampliar a imaxe -->
+<div id="modal-img">
+  <img src="" alt="">
+</div>
+
+<!-- Script para abrir/pechar o modal -->
+<script>
+  // Selecciona a imaxe destacada e o modal
+  const featuredImg = document.getElementById('featured-img');
+  const modal = document.getElementById('modal-img');
+  const modalImg = modal.querySelector('img');
+
+  // Ao clicar na imaxe, mostra o modal coa imaxe ampliada
+  featuredImg.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = featuredImg.src;
+  });
+
+  // Ao clicar fóra da imaxe, pecha o modal
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+</script>
 </body>
 </html>
