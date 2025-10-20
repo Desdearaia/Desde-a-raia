@@ -182,134 +182,128 @@ nav#menu-panel ul.nav-links li a {
 }
 
 /* ===========================
-   INDEX: GRID CENTRAL + LATERAL
+   TITULARES
 =========================== */
-.featured-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    align-items: start;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulo);
 }
 
-.featured-central {
+.featured-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: var(--amarelo);
+    margin-bottom: 0.5rem;
     text-align: left;
 }
 
-.featured-link {
-    display: block;
-    position: relative;
-}
-
-.featured-image {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    filter: brightness(60%);
-    transition: filter 0.3s;
-}
-
-.featured-link:hover .featured-image {
-    filter: brightness(40%);
-}
-
-.featured-text h1 {
-    font-size: 2.5rem;
-    color: var(--amarelo);
-    margin-bottom: 0.5rem;
-}
-
-.featured-text h2 {
+.featured-sub {
     font-size: 1.2rem;
-    color: var(--amarelo);
-}
-
-.reportaxes-side {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.news-item p.news-date {
-    font-size: 0.9rem;
-    color: #444;
-    margin-bottom: 0.2rem;
+    line-height: 1.3;
+    text-align: left;
 }
 
 .news-item h3 {
     font-size: 1.2rem;
-    margin-bottom: 0.3rem;
+    line-height: 1;
     color: var(--verde);
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+.featured-link .read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--amarelo);
+    color: var(--verde);
+    font-family: var(--font-destacada);
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.featured-link .read-more:hover {
+    background-color: #f2f200;
+}
+
+/* ===========================
+   SECCIÓN DESTACADA
+=========================== */
+.featured {
+    position: relative;
+    margin-top: 0;
+}
+
+.featured-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(60%);
+    transition: filter 0.3s;
+}
+
+.featured:hover .featured-image {
+    filter: brightness(40%);
+}
+
+.featured-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: var(--amarelo);
+}
+
+/* ===========================
+   NOTICIAS
+=========================== */
+.mais-reportaxes {
+    padding: 3rem 0;
+}
+
+.mais-reportaxes h2 {
+    color: var(--verde);
+    font-family: var(--font-titulo);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.news-item {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.news-item:hover {
+    transform: scale(1.02);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .news-item p {
     font-size: 1rem;
-    color: #333;
-}
-
-/* ===========================
-   PÁXINAS VERDES (Que é e Contacto)
-=========================== */
-.page-green {
-    background-color: var(--verde);
-    color: var(--amarelo);
-    padding: 3rem 2rem;
-    min-height: calc(100vh - 80px);
-    margin-top: 0;
-}
-
-.page-green .container {
-    max-width: 800px;
-}
-
-.page-green h1 {
-    font-family: var(--font-titulo);
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    line-height: 1.5;
     text-align: center;
-}
-
-.page-green p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.page-green a {
-    color: var(--amarelo);
-    text-decoration: underline;
+    margin: 0 1rem 1.5rem;
 }
 
 /* ===========================
-   FOOTER
-=========================== */
-footer.site-footer {
-    background-color: #ffffff;
-    color: var(--verde);
-    padding: 2rem 1rem;
-    margin-top: 0rem;
-}
-
-footer .footer-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-footer .socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-footer .socials a img {
-    width: 30px;
-    height: 30px;
-}
-
-/* ===========================
-   REPORTAXES INDIVIDUAIS
+   REPORTAXE INDIVIDUAL
 =========================== */
 .reportaxe {
     padding: 2rem 0;
@@ -317,6 +311,50 @@ footer .socials a img {
     margin: 0 auto;
     font-size: 1.1rem;
     line-height: 1.8;
+}
+
+.reportaxe .container {
+    padding: 0 3rem;
+}
+
+.reportaxe-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.reportaxe-title {
+    font-size: 3rem;
+    color: var(--verde);
+    margin-bottom: 0.5rem;
+}
+
+.reportaxe-subtitle {
+    font-size: 1.5rem;
+    font-family: var(--font-destacada);
+    color: var(--texto-oscuro);
+    margin-bottom: 1rem;
+}
+
+.reportaxe-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.reportaxe-figure {
+    margin: 2rem 0;
+}
+
+.reportaxe-figure img {
+    width: 100%;
+    height: auto;
+}
+
+.reportaxe-figure figcaption {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
 .reportaxe-content h2 {
@@ -333,24 +371,200 @@ footer .socials a img {
 }
 
 /* ===========================
-   RESPONSIVE
+   PAGE GREEN
+=========================== */
+.page-green { 
+    background-color: var(--verde);
+    color: var(--amarelo);
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 80px);
+    margin-top: 0;
+}
+
+.page-green .container {
+    max-width: 800px;
+}
+
+.page-green .page-title {
+    font-size: 3rem;
+    color: var(--amarelo);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-green .page-content h2 {
+    font-size: 2rem;
+    color: var(--amarelo);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--amarelo);
+    padding-bottom: 0.3rem;
+}
+
+.page-green .page-content p {
+    margin-bottom: 1.5rem;
+}
+
+.page-green a {
+    color: var(--amarelo);
+    text-decoration: underline;
+}
+
+/* ===========================
+   FORMULARIO CONTACTO
+=========================== */
+.page-green.contacto .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.page-green.contacto .contact-form label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--amarelo);
+}
+
+.page-green.contacto .contact-form input,
+.page-green.contacto .contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid var(--amarelo);
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-family: var(--font-texto);
+    color: var(--amarelo);
+    background-color: rgba(128, 128, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.page-green.contacto .contact-form input:focus,
+.page-green.contacto .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--amarelo);
+    background-color: rgba(128, 128, 0, 0.35);
+}
+
+.page-green.contacto .contact-form button {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--verde);
+    color: var(--amarelo);
+    font-family: var(--font-destacada);
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-green.contacto .contact-form button:hover {
+    background-color: #666600;
+}
+
+/* ===========================
+   THANK YOU MESSAGE
+=========================== */
+.thank-you {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    text-align: center;
+}
+
+.thank-you.show {
+    opacity: 1;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer.site-footer {
+    background-color: var(--verde);
+    color: var(--amarelo);
+    padding: 2rem 1rem;
+    margin-top: 0rem;
+}
+
+footer .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--amarelo);
+}
+
+footer .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+footer .socials a {
+    display: inline-flex;
+    align-items: center;
+}
+
+footer .socials a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   BLOCKQUOTE
+=========================== */
+blockquote {
+    border-left: 4px solid var(--amarelo);
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 2rem 0;
+    color: var(--amarelo);
+}
+
+/* ===========================
+   RESPONSIVE OPTIMIZADO
 =========================== */
 @media (max-width: 1024px) {
-    .featured-text h1 { font-size: 2rem; }
-    .featured-text h2 { font-size: 1rem; }
+    .featured-title { font-size: 2.5rem; }
+    .featured-sub { font-size: 1.1rem; }
+    .reportaxe-content h2 { font-size: 1.8rem; }
+    .reportaxe { padding: 1.5rem 1rem; }
+    .container { padding: 0 1.5rem; }
 }
 
 @media (max-width: 768px) {
-    .featured-grid { grid-template-columns: 1fr; }
     header.site-header { height: 65px; }
     .header-inner { padding: 0 0.8rem; }
     .logo-link img.logo-img { height: 45px; }
+    .featured-title { font-size: 2rem; }
+    .featured-sub { font-size: 1rem; }
+    nav#menu-panel { width: 100%; top: 65px; padding: 0.8rem; }
+    .reportaxe { padding: 1rem 0.8rem; font-size: 1rem; }
+    .reportaxe-content h2 { font-size: 1.6rem; }
+    .reportaxe-content p { font-size: 0.95rem; line-height: 1.6; }
 }
 
 @media (max-width: 480px) {
     header.site-header { height: 60px; }
     .header-inner { padding: 0 0.5rem; }
     .logo-link img.logo-img { height: 40px; }
-    .featured-text h1 { font-size: 1.5rem; }
-    .featured-text h2 { font-size: 0.9rem; }
+    .featured-title { font-size: 1.5rem; line-height: 1.2; }
+    .featured-sub { font-size: 0.9rem; line-height: 1.2; }
+    .reportaxe { padding: 0.8rem 0.5rem; font-size: 0.95rem; line-height: 1.5; }
+    .reportaxe-content h2 { font-size: 1.4rem; }
+    .reportaxe-content p { font-size: 0.9rem; line-height: 1.4; }
+    .news-item img { height: 150px; }
+    .featured-image { height: 50vh; }
+    .search-container input { padding: 0.4rem; font-size: 0.9rem; }
+    .page-green.contacto .contact-form input,
+    .page-green.contacto .contact-form textarea { padding: 0.8rem; font-size: 1rem; }
+    .page-green.contacto .contact-form button { padding: 0.8rem; font-size: 1rem; }
 }

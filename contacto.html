@@ -32,10 +32,6 @@
         <li><a href="que-e-desde-a-raia.html">Que é <em>Desde a raia</em></a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
-
-      <div class="search-container" role="search">
-        <input id="search" type="search" placeholder="Buscar...">
-      </div>
     </nav>
   </header>
 
@@ -44,14 +40,22 @@
     <section class="page-green contacto">
       <div class="container">
         <h1>Contacto</h1>
-        <p>O meu nome é <strong>María Patricio</strong> e podes poñerte en contacto comigo a través do correo electrónico: <a href="mailto:desdearaia@gmail.com">desdearaia@gmail.com</a>.</p>
-        <p>Agardo calquera mensaxe, suxerencia ou consulta. Estarei encantada de recibir as túas ideas ou comentarios. Esta é a filosofía de <em>Desde a raia</em>: información dende aquí e para a xente de aquí.</p>
+        <p>
+          Pra calquera dúbida, proposta ou comentario, podes poñerte en contacto comigo:
+        </p>
+        <p>
+          <strong>María Patricio</strong><br>
+          <a href="mailto:desdearaia@gmail.com" style="color: var(--amarelo); text-decoration: underline;">desdearaia@gmail.com</a>
+        </p>
+        <p>
+          Estarei encantada de recibir a túa mensaxe e responderche o antes posible. Grazas por interesarte en <em>Desde a raia</em>!
+        </p>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer" role="contentinfo" style="background-color: #ffffff; color: var(--verde);">
     <div class="footer-inner container">
       <div class="socials">
         <a href="https://www.facebook.com/desdearaia" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -71,44 +75,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // --- MENÚ DESPREGABLE ---
-      const menuTrigger = document.querySelector('.menu-trigger');
-      const menuPanel = document.getElementById('menu-panel');
-      if (menuTrigger && menuPanel) {
-        menuTrigger.addEventListener('click', () => {
-          menuPanel.classList.toggle('active');
-          menuTrigger.setAttribute('aria-expanded', menuPanel.classList.contains('active'));
-        });
-      }
-
-      // --- CABECEIRA INTELIXENTE ---
-      let lastScrollY = window.scrollY;
-      const header = document.querySelector('header');
-      if (header) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > lastScrollY) {
-            header.classList.add('hidden');
-          } else {
-            header.classList.remove('hidden');
-          }
-          lastScrollY = window.scrollY;
-        });
-        document.addEventListener('mousemove', (e) => {
-          if (e.clientY < 50) header.classList.remove('hidden');
-        });
-      }
-
-      // --- LOGO COMO BOTÓN AO INICIO ---
-      const logo = document.querySelector('.logo-link img.logo-img');
-      if (logo) {
-        logo.addEventListener('click', () => {
-          window.location.href = 'index.html';
-        });
-      }
-    });
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-s
