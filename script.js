@@ -11,20 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- BUSCADOR ---
-  const searchInput = document.getElementById('search');
-  const articles = document.querySelectorAll('.news-item');
-
-  if (searchInput && articles.length) {
-    searchInput.addEventListener('keyup', () => {
-      const term = searchInput.value.toLowerCase();
-      articles.forEach(article => {
-        const text = article.innerText.toLowerCase();
-        article.style.display = text.includes(term) ? '' : 'none';
-      });
-    });
-  }
-
   // --- CABECEIRA INTELIXENTE ---
   let lastScrollY = window.scrollY;
   const header = document.querySelector('header');
@@ -40,9 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener('mousemove', (e) => {
-      if (e.clientY < 50) {
-        header.classList.remove('hidden');
-      }
+      if (e.clientY < 50) header.classList.remove('hidden');
     });
   }
 
@@ -51,29 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (logo) {
     logo.addEventListener('click', () => {
       window.location.href = 'index.html';
-    });
-  }
-
-  // --- FORMULARIO DE CONTACTO (mensaxe de confirmación con fade-in) ---
-  const contactForm = document.getElementById('contactForm');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // evita recarga ou abrir cliente de correo
-
-      const formContainer = document.querySelector('.contacto .container');
-      formContainer.innerHTML = `
-        <div class="thank-you">
-          <h1>Grazas pola túa mensaxe!</h1>
-          <p>Recibímola correctamente e responderémosche axiña dende <strong>desdearaia@gmail.com</strong>.</p>
-          <p><a href="index.html" style="color: var(--amarelo); text-decoration: underline;">Volver ao inicio</a></p>
-        </div>
-      `;
-
-      const thankYouDiv = formContainer.querySelector('.thank-you');
-      setTimeout(() => {
-        thankYouDiv.classList.add('show');
-      }, 50);
     });
   }
 

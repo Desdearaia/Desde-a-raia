@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Desde a raia</title>
+  <title>Contacto — Desde a raia</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/family=Source+Sans+Pro:wght@300;400;600&family=League+Spartan:wght@600&display=swap" rel="stylesheet">
@@ -44,25 +44,13 @@
     <section class="page-green contacto">
       <div class="container">
         <h1>Contacto</h1>
-        <p>Se queres enviarnos unha mensaxe, unha proposta de tema ou simplemente saudar, podes facelo cubrindo este formulario:</p>
-
-        <form class="contact-form" id="contactForm">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" required>
-
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" required>
-
-          <label for="mensaxe">Mensaxe</label>
-          <textarea id="mensaxe" name="mensaxe" rows="5" required></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
+        <p>O meu nome é <strong>María Patricio</strong> e podes poñerte en contacto comigo a través do correo electrónico: <a href="mailto:desdearaia@gmail.com">desdearaia@gmail.com</a>.</p>
+        <p>Agardo calquera mensaxe, suxerencia ou consulta. Estarei encantada de recibir as túas ideas ou comentarios. Esta é a filosofía de <em>Desde a raia</em>: información dende aquí e para a xente de aquí.</p>
       </div>
     </section>
   </main>
 
- <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner container">
       <div class="socials">
@@ -72,16 +60,55 @@
         <a href="https://www.instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <img src="assets/images/instagram.png" alt="Instagram">
         </a>
-        <a class="mail-btn" href="mailto:desdearaia@gmail.com?subject=Contacto%20desde%20a%20web" aria-label="Enviar correo a Desde a raia">
+        <a class="mail-btn" href="mailto:desdearaia@gmail.com" aria-label="Enviar correo a Desde a raia">
          <img src="assets/images/correo.png" alt="Correo">
         </a>
-    </div>
-    <div class="copyright">
-      <small>© 2025 Desde a raia</small>
+      </div>
+      <div class="copyright">
+        <small>© 2025 Desde a raia</small>
+      </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="script.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // --- MENÚ DESPREGABLE ---
+      const menuTrigger = document.querySelector('.menu-trigger');
+      const menuPanel = document.getElementById('menu-panel');
+      if (menuTrigger && menuPanel) {
+        menuTrigger.addEventListener('click', () => {
+          menuPanel.classList.toggle('active');
+          menuTrigger.setAttribute('aria-expanded', menuPanel.classList.contains('active'));
+        });
+      }
+
+      // --- CABECEIRA INTELIXENTE ---
+      let lastScrollY = window.scrollY;
+      const header = document.querySelector('header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > lastScrollY) {
+            header.classList.add('hidden');
+          } else {
+            header.classList.remove('hidden');
+          }
+          lastScrollY = window.scrollY;
+        });
+        document.addEventListener('mousemove', (e) => {
+          if (e.clientY < 50) header.classList.remove('hidden');
+        });
+      }
+
+      // --- LOGO COMO BOTÓN AO INICIO ---
+      const logo = document.querySelector('.logo-link img.logo-img');
+      if (logo) {
+        logo.addEventListener('click', () => {
+          window.location.href = 'index.html';
+        });
+      }
+    });
+  </script>
 </body>
 </html>
+s
