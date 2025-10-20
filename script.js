@@ -75,3 +75,18 @@ if (contactForm) {
     }, 50); // tempo mínimo para que funcione a transición
   });
 }
+
+
+// --- MODAL IMAXE
+const featuredImg = document.getElementById('featured-img');
+const modal = document.getElementById('modal-img');
+const modalImg = modal.querySelector('img');
+
+featuredImg.addEventListener('click', () => {
+  modal.style.display = 'flex';
+  modalImg.src = featuredImg.src;
+});
+
+modal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
