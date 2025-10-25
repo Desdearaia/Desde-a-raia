@@ -12,9 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- CABECEIRA INTELIXENTE ---
   let lastScrollY = window.scrollY;
   const header = document.querySelector('header');
+  const SCROLL_THRESHOLD = 50;
   if (header) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > lastScrollY) {
+      if (window.scrollY > lastScrollY && window.scrollY > SCROLL_THRESHOLD) {
         header.classList.add('hidden');
       } else {
         header.classList.remove('hidden');
@@ -22,22 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
       lastScrollY = window.scrollY;
     });
     document.addEventListener('mousemove', (e) => {
-      if (e.clientY < 50) {
-        header.classList.remove('hidden');
-      }
+      if (e.clientY < 50) { header.classList.remove('hidden'); }
     });
   }
 
-  // --- LOGO COMO BOTÓN AO INICIO ---
-  const logo = document.querySelector('.logo-link img.logo-img');
-  if (logo) {
-    logo.addEventListener('click', () => {
-      window.location.href = 'index.html';
-    });
-  }
-
-  // --- MODAL IMAXE ---
-  const featuredImg = document.querySelector('.featured-central img.featured-image');
+  // --- MODAL IMAXE PARA REPORTAXE PRINCIPAL ---
+  const featuredImg = document.querySelector('.col-center .featured-image');
   const modal = document.getElementById('modal-img');
   if (featuredImg && modal) {
     const modalImg = modal.querySelector('img');
@@ -45,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = 'flex';
       modalImg.src = featuredImg.src;
     });
-    modal.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
+    modal.addEventListener('click', () => { modal.style.display = 'none'; });
   }
 });
