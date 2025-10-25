@@ -314,6 +314,12 @@ blockquote {
     line-height: 1.8;
 }
 
+.modelo-reportaxe .container {
+    max-width: 900px;      /* ancho centrado como en page-green */
+    margin: 0 auto;
+    padding: 0 rem;       /* marxes laterais */
+}
+
 .modelo-reportaxe-header {
     margin-bottom: 2rem;
     text-align: center;
