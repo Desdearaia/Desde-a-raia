@@ -45,7 +45,6 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 /* Contedores estreitos para páxinas interiores */
-.modelo-reportaxe .container,
 .page-green .container,
 .que-e-desde-a-raia .container,
 .contacto .container {
@@ -53,6 +52,9 @@ img { display: block; max-width: 100%; height: auto; }
     margin: 0 auto; 
     padding: 0 2rem; 
 }
+
+}
+
 
 main { padding-top: 100px; padding-bottom: 3rem; }
 
@@ -315,9 +317,12 @@ blockquote {
 }
 
 .modelo-reportaxe .container {
-    max-width: 900px;      /* ancho centrado como en page-green */
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 rem;       /* marxes laterais */
+    padding: 0; /* ou 0rem */
+    box-sizing: border-box; /* reforza o cálculo do ancho */
+}
+
 }
 
 .modelo-reportaxe-header {
