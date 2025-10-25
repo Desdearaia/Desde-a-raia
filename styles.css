@@ -46,8 +46,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .page-green .container,
 .que-e-desde-a-raia .container,
-.contacto .container,
-.modelo-reportaxe .container {
+.contacto .container, {
     max-width: 900px; 
     margin: 0 auto; 
     padding: 0 2rem; 
@@ -77,6 +76,19 @@ header.site-header {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem; 
+
+}
+
+.header-modelo-reportaxe {
+    max-width: 1200px; 
+    margin: 0 auto;    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; 
+
 }
 header.hidden { top: -100px; }
 .logo-link img.logo-img { height: 75px; cursor: pointer; }
