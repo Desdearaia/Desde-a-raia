@@ -385,6 +385,9 @@ footer .copyright { text-align: center; font-size: 0.9rem; }
     .page-green.contacto .contact-form button { padding: 0.8rem; font-size: 0.9rem; }
 }
 @media (max-width: 480px) {
+    .modelo-reportaxe { padding: 0; }
+    .modelo-reportaxe .container { padding: 0; }
+}
     .modelo-reportaxe .container {
         padding: 0 1rem; /* 1rem de espazo lateral para o texto */
         margin: 0 auto;  /* centrar contido se é necesario */
@@ -396,4 +399,3 @@ footer .copyright { text-align: center; font-size: 0.9rem; }
 
     .modelo-reportaxe-content p {
         font-size: 0.9rem;
-        line-height: 1.4;
