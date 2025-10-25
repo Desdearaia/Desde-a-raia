@@ -46,21 +46,27 @@
       <!-- Columna esquerda: 3 reportaxes pequenas -->
       <div class="col-left">
         <article class="news-item small">
-          <a href="#" class="news-link">
+          <a href="#">
             <img src="assets/images/Reportaxe2.jpg" alt="Mercado transfronteirizo">
             <h3>O mercado transfronteirizo volve en outubro</h3>
+            <time datetime="2025-10-25">25 outubro 2025</time>
+            <p>Os produtores de ambas beiras preparan unha nova edición do mercado conxunto.</p>
           </a>
         </article>
         <article class="news-item small">
-          <a href="#" class="news-link">
+          <a href="#">
             <img src="assets/images/Reportaxe3.jpg" alt="Camiño">
             <h3>O Camiño Portugués da Costa reforza sinalización</h3>
+            <time datetime="2025-10-20">20 outubro 2025</time>
+            <p>A ruta entre A Guarda e Tui gaña novos paneis e puntos de descanso.</p>
           </a>
         </article>
         <article class="news-item small">
-          <a href="#" class="news-link">
+          <a href="#">
             <img src="assets/images/Reportaxe4.jpg" alt="Festival">
             <h3>Festival da Amizade celebra 25 anos de irmandade</h3>
+            <time datetime="2025-10-15">15 outubro 2025</time>
+            <p>Tui e Valença conmemoran un cuarto de século de colaboración cultural.</p>
           </a>
         </article>
       </div>
@@ -80,7 +86,7 @@
 
       <!-- Columna dereita: iframe Facebook -->
       <div class="col-right">
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D24701209169571737%26set%3Da.117517888367540&show_text=true&width=500" width="500" height="533" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D24701209169571737%26set%3Da.117517888367540&show_text=true&width=500" frameborder="0" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
       </div>
 
     </section>
@@ -106,7 +112,85 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="script.js" defer></script>
 </body>
 </html>
+
+/* ===========================
+   INDEX HOMEPAGE GRID
+=========================== */
+.homepage-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* esquerda 20%, centro 60%, dereita 20% aprox */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.col-left, .col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.col-left .news-item a h3 {
+  color: var(--verde);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.col-left .news-item a time {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.col-left .news-item a p {
+  font-size: 0.95rem;
+  color: var(--texto-oscuro);
+}
+
+.news-item img {
+  border-radius: 0; /* cadradas */
+}
+
+.featured {
+  margin-top: 0;
+}
+
+.featured-image {
+  width: 100%;
+  height: 85vh; /* máis grande que antes */
+  object-fit: cover;
+}
+
+.col-right iframe {
+  width: 100%;
+  height: 533px;
+  max-width: 100%;
+}
+
+/* ===========================
+   RESPONSIVE INDEX
+=========================== */
+@media (max-width: 1024px) {
+  .homepage-grid {
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .featured-image { height: 70vh; }
+}
+
+@media (max-width: 768px) {
+  .homepage-grid {
+    grid-template-columns: 1fr;
+  }
+  .col-left, .col-center, .col-right {
+    width: 100%;
+  }
+  .featured-image { height: 50vh; }
+  .col-right iframe { width: 100%; height: auto; }
+}
