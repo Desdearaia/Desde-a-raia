@@ -314,12 +314,6 @@ blockquote {
     line-height: 1.8;
 }
 
-.modelo-reportaxe .container {
-    max-width: 900px;      /* ancho centrado como en page-green */
-    margin: 0 auto;
-    padding: 0 2rem;       /* marxes laterais */
-}
-
 .modelo-reportaxe-header {
     margin-bottom: 2rem;
     text-align: center;
@@ -469,7 +463,7 @@ footer .copyright { text-align: center; font-size: 0.9rem; }
     .menu-trigger { font-size: 1.2rem; }
     .featured-title { font-size: 1.5rem; line-height: 1.2; }
     .featured-sub { font-size: 0.9rem; line-height: 1.2; }
-    .modelo-reportaxe { padding: 0.8rem; font-size: 0.95rem; line-height: 1.5; }
+    .modelo-reportaxe { padding: 0.8rem 0.5rem; font-size: 0.95rem; line-height: 1.5; }
     .modelo-reportaxe-content h2 { font-size: 1.4rem; }
     .modelo-reportaxe-content p { font-size: 0.9rem; line-height: 1.4; }
     .search-container input { padding: 0.4rem; font-size: 0.9rem; }
