@@ -234,6 +234,18 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-titulo); }
 /* ===========================
    REPORTAXE INDIVIDUAL / OUTRAS PÁXINAS
 =========================== */
+/* Titulares verdes con hover amarelo */
+.modelo-reportaxe :is(h1,h2,h3,h4,h5,h6) {
+    color: var(--verde);
+    transition: color 0.3s ease; /* transición suave */
+}
+
+.modelo-reportaxe :is(h1,h2,h3,h4,h5,h6):hover {
+    color: var(--amarelo);
+    cursor: pointer;
+}
+
+
 .modelo-reportaxe { padding: 2rem 0; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; } 
 .modelo-reportaxe-header { margin-bottom: 2rem; text-align: center; }
 .modelo-reportaxe-title { font-size: 3rem; color: var(--verde); margin-bottom: 0.5rem; }
@@ -262,7 +274,6 @@ blockquote {
     min-height: calc(100vh - 100px); 
     margin-top: 0; 
 }
-
 .page-green .page-title { font-size: 3rem; color: var(--amarelo); text-align: center; margin-bottom: 2rem; }
 .page-green .page-content h2 { font-size: 2rem; color: var(--amarelo); margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid var(--amarelo); padding-bottom: 0.3rem; }
 .page-green .page-content p { margin-bottom: 1.5rem; }
@@ -288,6 +299,107 @@ blockquote {
 
 .thank-you { opacity: 0; transition: opacity 0.6s ease-in-out; text-align: center; }
 .thank-you.show { opacity: 1; }
+/* ===========================
+   MODELO REPORTAXE (CONTIDO CENTRADO)
+=========================== */
+.modelo-reportaxe {
+    padding: 2rem 0;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.modelo-reportaxe .container {
+    max-width: 900px;      /* ancho centrado como en page-green */
+    margin: 0 auto;
+    padding: 0 2rem;       /* marxes laterais */
+}
+
+.modelo-reportaxe-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.modelo-reportaxe-title {
+    font-size: 3rem;
+    color: var(--verde);
+    margin-bottom: 0.5rem;
+}
+
+.modelo-reportaxe-subtitle {
+    font-size: 1.5rem;
+    font-family: var(--font-destacada);
+    color: var(--texto-oscuro);
+    margin-bottom: 1rem;
+}
+
+.modelo-reportaxe-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.modelo-reportaxe-figure {
+    margin: 2rem 0;
+}
+
+.modelo-reportaxe-figure img {
+    width: 100%;
+    height: auto;
+}
+
+.modelo-reportaxe-figure figcaption {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.modelo-reportaxe-content h2 {
+    font-size: 2rem;
+    color: var(--verde);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--amarelo);
+    padding-bottom: 0.3rem;
+}
+
+.modelo-reportaxe-content p {
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    border-left: 4px solid var(--verde);
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 2rem 0;
+    color: var(--verde);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+/* Tablet horizontal (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .modelo-reportaxe { padding: 1.5rem 1rem; }
+    .modelo-reportaxe-content h2 { font-size: 1.8rem; }
+}
+
+/* Tablet vertical / móbil grande (max-width: 768px) */
+@media (max-width: 768px) {
+    .modelo-reportaxe { padding: 1rem 0.8rem; font-size: 1rem; }
+    .modelo-reportaxe-content h2 { font-size: 1.6rem; }
+    .modelo-reportaxe-content p { font-size: 0.95rem; line-height: 1.6; }
+}
+
+/* Móbil pequeno (max-width: 480px) */
+@media (max-width: 480px) {
+    .modelo-reportaxe { padding: 0.8rem 0.5rem; font-size: 0.95rem; line-height: 1.5; }
+    .modelo-reportaxe-content h2 { font-size: 1.4rem; }
+    .modelo-reportaxe-content p { font-size: 0.9rem; line-height: 1.4; }
+}
+
 
 /* ===========================
    FOOTER
