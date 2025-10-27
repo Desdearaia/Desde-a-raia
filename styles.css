@@ -9,7 +9,7 @@
 
     --font-titulo: 'League Spartan'
     --font-texto: 'Source Sans Pro', sans-serif;
-    --font-destacada: 'League Spartan'
+    --font-destacada: 'League Spartan', sans-serif;
 }
 
 * { 
