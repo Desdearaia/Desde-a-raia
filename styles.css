@@ -132,7 +132,7 @@ nav#menu-panel ul.nav-links li a { color: var(--amarelo); font-weight: 700; text
 =========================== */
 h1,h2,h3,h4,h5,h6 { font-family: var(--font-titulo); }
 .featured-title { font-size: 4rem; line-height: 1; color: var(--amarelo); margin-bottom: 0 rem; text-align: left; }
-.featured-sub { font-size: 2 rem; line-height: 1.05; text-align: left; }
+.featured-sub { font-size: 2 rem; line-height: 1.05; text-align: left; margin-top: 0 rem}
 .news-item h3 { font-size: 1.2rem; line-height: 1; color: var(--verde); margin: 0.5rem 0; text-align: center; }
 .featured-link .read-more {
     display: inline-block; padding: 0.5rem 1rem; background-color: var(--amarelo);
@@ -141,9 +141,59 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-titulo); }
 .featured-link .read-more:hover { background-color: #f2f200; }
 
 /* ===========================
+   TITULARES E BOTONES
+=========================== */
+h1,h2,h3,h4,h5,h6 { 
+    font-family: var(--font-titulo); 
+}
+
+/* SECCIÓN DESTACADA - títulos e subtítulos grandes e pegados */
+.featured-title {
+    font-size: 4rem; 
+    line-height: 1.05; 
+    color: var(--amarelo); 
+    margin-bottom: 0; 
+    text-align: left; 
+}
+
+.featured-sub {
+    font-size: 2rem; 
+    line-height: 1.05; 
+    text-align: left; 
+    margin-top: 0; 
+}
+
+.news-item h3 { 
+    font-size: 1.2rem; 
+    line-height: 1; 
+    color: var(--verde); 
+    margin: 0.5rem 0; 
+    text-align: center; 
+}
+
+.featured-link .read-more {
+    display: inline-block; 
+    padding: 0.5rem 1rem; 
+    background-color: var(--amarelo);
+    color: var(--verde); 
+    font-family: var(--font-destacada); 
+    font-weight: 600; 
+    border-radius: 4px; 
+    transition: background-color 0.3s;
+}
+
+.featured-link .read-more:hover { 
+    background-color: #f2f200; 
+}
+
+/* ===========================
    SECCIÓN DESTACADA
 =========================== */
-.featured { position: relative; margin-top: 0; }
+.featured { 
+    position: relative; 
+    margin-top: 0; 
+}
+
 .featured-image {
     width: 100%;
     height: 70vh; 
@@ -152,10 +202,31 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-titulo); }
     filter: brightness(60%);
     transition: filter 0.3s;
 }
-.featured:hover .featured-image { filter: brightness(40%); }
+
+.featured:hover .featured-image { 
+    filter: brightness(40%); 
+}
+
 .featured-text {
-    position: absolute; top: 50%; left: 5%; transform: translateY(-50%);
-    color: var(--amarelo);
+    position: absolute; 
+    top: 50%; 
+    left: 5%; 
+    transform: translateY(-50%);
+}
+
+/* SECCIÓN MODELO REPORTAXE - títulos e subtítulos totalmente pegados */
+.reportaxe-title {
+    font-size: 4rem;
+    line-height: 1.05;
+    margin: 0;      /* elimina espazo co subtítulo */
+    padding: 0;
+}
+
+.reportaxe-subtitle {
+    font-size: 2rem;
+    line-height: 1.05;
+    margin: 0;      /* elimina espazo co título */
+    padding: 0;
 }
 
 /* ===========================
@@ -167,29 +238,94 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-titulo); }
     gap: 2rem;
     padding: 3rem 0;
 }
+
+/* Columnas - estilos xerais */
 .col-left, .col-center, .col-right {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    text-align: left; /* todo o texto alineado á esquerda */
 }
+
+/* ===========================
+   Columna esquerda
+=========================== */
 .col-left .news-item a h3 {
     color: var(--verde);
     font-weight: 700;
     margin-bottom: 0.3rem;
+     text-align: left;
 }
+
 .col-left .news-item a time {
     display: block;
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 0.3rem;
+     text-align: left;
 }
+
 .col-left .news-item a p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* ===========================
+   Columna central
+=========================== */
+.col-center .news-item a h3,
+.col-center .news-item a time,
+.col-center .news-item a p {
+    text-align: left; /* asegurar aliñamento á esquerda */
+}
+
+.col-center .news-item a h3 {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.col-center .reportaxe-hero time {
+    font-size: 0.9rem; /* tamaño da data */
+    color: #666;       /* cor da data */
+    margin-bottom: 0.5rem;
+}
+
+.col-center .reportaxe-hero p {
+    font-size: 1.5rem; /* tamaño grande do texto */
+    color: #666;       /* cor do texto */
+    margin: 0.5rem 0;
+    text-align: left;
+    }
+
+/* ===========================
+   Columna dereita
+=========================== */
+.col-right .news-item a h3,
+.col-right .news-item a time,
+.col-right .news-item a p {
+    text-align: left; /* ou center se prefires, cambia aquí */
+}
+
+.col-right .news-item a h3 {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.col-right .news-item a time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.col-right .news-item a p {
     font-size: 0.95rem;
     color: var(--texto-oscuro);
 }
+
+/* Featured image */
 .homepage-grid .featured-image {
     height: 85vh;
 }
+
 
 /* ===========================
    MODELO REPORTAXE
