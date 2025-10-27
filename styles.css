@@ -7,9 +7,9 @@
     --branco: #ffffff;
     --texto-oscuro: #151f28;
 
-    --font-titulo: 'League Spartan', serif;
-    --font-texto: 'League Spartan', sans-serif;
-    --font-destacada: 'League Spartan', sans-serif;
+    --font-titulo: 'League Spartan'
+    --font-texto: 'Source Sans Pro', sans-serif;
+    --font-destacada: 'League Spartan'
 }
 
 * { 
