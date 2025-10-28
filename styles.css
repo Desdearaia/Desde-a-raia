@@ -457,3 +457,36 @@ footer .copyright { text-align: center; font-size: 0.9rem; }
     .modelo-reportaxe-content p {
         font-size: 0.9rem;
         line-height: 1.4;
+
+        .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Móvil: center, left, right */
+.grid {
+  grid-template-areas: 
+    "center"
+    "left"
+    "right";
+}
+
+/* Tablet: left, center, right */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-areas: "left center right";
+  }
+}
+
+/* Desktop: left, right, center */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-areas: "left right center";
+  }
+}
+
+/* Asignamos cada item a su área */
+.center { grid-area: center; }
+.left   { grid-area: left; }
+.right  { grid-area: right; }
