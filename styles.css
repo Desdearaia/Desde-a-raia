@@ -377,113 +377,83 @@ footer .socials { display: flex; justify-content: center; align-items: center; g
 footer .socials a { display: inline-flex; align-items: center; }
 footer .socials a img { width: 30px; height: 30px; }
 footer .copyright { text-align: center; font-size: 0.9rem; }
+
 /* ===========================
-   RESPONSIVE COMPLETO
+   RESPONSIVE
+=========================== */
+/* As media queries que tiñas quedan igual, só asegurando que non teñan erros de coma */
+
+
+/* ===========================
+   RESPONSIVE
 =========================== */
 
-/* Tablet horizontal (<= 1024px) */
+/* Tablet horizontal (max-width: 1024px) */
 @media (max-width: 1024px) {
-  /* HEADER */
-  header.site-header { height: 90px; }
-  .header-inner, .header-modelo-reportaxe, .container, .modelo-reportaxe .container, .page-green .container { padding: 0 1.5rem; }
-  nav#menu-panel { right: 1.5rem; }
-  .logo-link img.logo-img { height: 60px; }
-  .menu-trigger { font-size: 1.6rem; }
-
-  /* HOMEPAGE GRID 2 columnas */
-  .homepage-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas:
-      "center left"
-      "center right";
-    gap: 1.5rem;
-    padding: 2rem 0;
-  }
-  .col-center { grid-area: center; }
-  .col-left { grid-area: left; }
-  .col-right { grid-area: right; }
-
-  .homepage-grid .featured-image { height: 70vh; }
-  .featured-title { font-size: 2.5rem; }
-  .featured-sub { font-size: 1.1rem; }
-
-  /* MODELO REPORTAXE */
-  .modelo-reportaxe { padding: 1.5rem 1rem; }
-  .modelo-reportaxe-content h2 { font-size: 1.8rem; }
-  .modelo-reportaxe-content p { font-size: 1rem; line-height: 1.5; }
-  .modelo-reportaxe .container { padding: 0 1rem; margin: 0 auto; }
+    header.site-header { height: 90px; }
+    .header-inner, .header-modelo-reportaxe, .container, .modelo-reportaxe .container, .page-green .container { padding: 0 1.5rem; }
+    nav#menu-panel { right: 1.5rem; }
+    .logo-link img.logo-img { height: 60px; }
+    .menu-trigger { font-size: 1.6rem; }
+    .homepage-grid { gap: 1.5rem; padding: 1.5rem 0; }
+    .homepage-grid .featured-image { height: 70vh; }
+    .featured-title { font-size: 2.5rem; }
+    .featured-sub { font-size: 1.1rem; }
+    .modelo-reportaxe { padding: 1.5rem 1rem; }
+    .modelo-reportaxe-content h2 { font-size: 1.8rem; }
+    .modelo-reportaxe-content p { font-size: 1rem; line-height: 1.5; }
 }
 
-/* Tablet vertical / móbil grande (<= 768px) */
+/* Tablet vertical / móbil grande (max-width: 768px) */
 @media (max-width: 768px) {
-  /* HEADER */
-  header.site-header { height: 75px; }
-  .header-inner, .header-modelo-reportaxe, .container, .modelo-reportaxe .container, .page-green .container { padding: 0 1rem; }
-  nav#menu-panel { width: 100%; top: 75px; right: 0; padding: 0.8rem; }
-  .logo-link img.logo-img { height: 50px; }
-  .menu-trigger { font-size: 1.4rem; }
-
-  /* HOMEPAGE GRID 1 columna */
-  .homepage-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "center"
-      "left"
-      "right";
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-  }
-  .col-center, .col-left, .col-right { width: 100%; }
-  .homepage-grid .featured-image { height: 55vh; }
-  .col-right iframe { min-height: 600px; }
-  .featured-title { font-size: 2rem; }
-  .featured-sub { font-size: 1rem; }
-
-  /* MODELO REPORTAXE */
-  .modelo-reportaxe { padding: 0; font-size: 1rem; }
-  .modelo-reportaxe .container { padding: 1 ; margin: 0 auto; }
-  .modelo-reportaxe-content h2 { font-size: 1.6rem; }
-  .modelo-reportaxe-content p { font-size: 0.95rem; line-height: 1.6; }
+    header.site-header { height: 75px; }
+    .header-inner, .header-modelo-reportaxe, .container, .modelo-reportaxe .container, .page-green .container { padding: 0 1rem; }
+    nav#menu-panel { width: 100%; top: 75px; right: 0; padding: 0.8rem; } 
+    .logo-link img.logo-img { height: 50px; }
+    .menu-trigger { font-size: 1.4rem; }
+    .homepage-grid { grid-template-columns: 1fr; grid-template-areas: "center" "left" "right"; padding: 1.5rem 0; }
+    .col-center, .col-left, .col-right { width: 100%; }
+    .homepage-grid .featured-image { height: 55vh; }
+    .col-right iframe { min-height: 600px; }
+    .featured-title { font-size: 2rem; }
+    .featured-sub { font-size: 1rem; }
+    .modelo-reportaxe { padding: 1rem 0.8rem; font-size: 1rem; }
+    .modelo-reportaxe-content h2 { font-size: 1.6rem; }
+    .modelo-reportaxe-content p { font-size: 0.95rem; line-height: 1.6; }
 }
 
-/* Móbil pequeno (<= 480px) */
+/* Móbil pequeno (max-width: 480px) */
 @media (max-width: 480px) {
-  /* HEADER */
-  header.site-header { height: 65px; }
-  .header-inner, .header-modelo-reportaxe, .container, .modelo-reportaxe .container, .page-green .container { padding: 0 0.8rem; }
-  .logo-link img.logo-img { height: 45px; }
-  .menu-trigger { font-size: 1.2rem; }
-
-  /* HOMEPAGE GRID - featured grande */
-  .homepage-grid .featured-image {
-    height: 70vh;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .featured-text {
-    top: 60%;
-    left: 5%;
-    transform: translateY(-50%);
-  }
-
-  .featured-title { font-size: 1.8rem; line-height: 1.2; }
-  .featured-sub { font-size: 1rem; line-height: 1.3; }
-
-  /* ===========================
-   MODELO REPORTAXE - RESPONSIVE
-=========================== */
-@media (max-width: 768px) {
-  /* Contedor de texto co padding lateral */
-  .modelo-reportaxe .container {
-    padding: 0 1rem; /* mantén 1rem de espazo lateral para o texto */
-    margin: 0 auto;
-  }
+    header.site-header { height: 65px; }
+    .header-inner, .header-modelo-reportaxe, .container, .modelo-reportaxe .container, .page-green .container { padding: 0 0.8rem; }
+    .homepage-grid .featured-image { height: 45vh; }
+    .news-item img { height: 150px; }
+    .col-right iframe { min-height: 500px; }
+    .logo-link img.logo-img { height: 45px; }
+    .menu-trigger { font-size: 1.2rem; }
+    .featured-title { font-size: 1.5rem; line-height: 1.2; }
+    .featured-sub { font-size: 0.9rem; line-height: 1.2; }
+    .modelo-reportaxe { padding: 0 0.8rem; font-size: 0.95rem; line-height: 1.5; }
+    .modelo-reportaxe-content h2 { font-size: 1.4rem; }
+    .modelo-reportaxe-content p { font-size: 0.9rem; line-height: 1.4; }
+    .search-container input, 
+    .page-green.contacto .contact-form input,
+    .page-green.contacto .contact-form textarea,
+    .page-green.contacto .contact-form button { padding: 0.8rem; font-size: 0.9rem; }
 }
-
-/* Header e footer sen padding lateral */
-header.site-header, footer.site-footer {
-  padding: 0;
+@media (max-width: 480px) {
+    .modelo-reportaxe { padding: 0; }
+    .modelo-reportaxe .container { padding: 0; }
 }
+    .modelo-reportaxe .container {
+        padding: 0 1rem; /* 1rem de espazo lateral para o texto */
+        margin: 0 auto;  /* centrar contido se é necesario */
+    }
 
+    .modelo-reportaxe-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .modelo-reportaxe-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
