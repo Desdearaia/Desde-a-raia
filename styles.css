@@ -442,38 +442,31 @@ footer .copyright { text-align: center; font-size: 0.9rem; }
     .modelo-reportaxe-content p { font-size: 0.95rem; line-height: 1.6; }
 }
 
-/* Móbil pequeno (<= 480px) */
+/* ====== Axuste visual no móbil ====== */
 @media (max-width: 480px) {
-    header.site-header { height: 65px; }
-    .header-inner, .header-modelo-reportaxe, .container, .modelo-reportaxe .container, .page-green .container { padding: 0 0.8rem; }
+  .homepage-grid .featured-image {
+    height: 70vh;           /* máis alto: ocupa 70% da altura da pantalla */
+    object-fit: cover;       /* mantén a imaxe ampliada sen deformar */
+    object-position: center; /* centra o foco da imaxe */
+  }
 
-    .homepage-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "center"
-            "left"
-            "right";
-        gap: 1rem;
-        padding: 1rem 0;
-    }
+  /* opción: mellorar visibilidade do texto sobre a imaxe */
+  .featured-text {
+    top: 60%;                /* baixa un pouco o texto sobre a imaxe */
+    left: 5%;
+    transform: translateY(-50%);
+  }
 
-    .homepage-grid .featured-image { height: 45vh; }
-    .news-item img { height: 150px; }
-    .col-right iframe { min-height: 500px; }
-    .logo-link img.logo-img { height: 45px; }
-    .menu-trigger { font-size: 1.2rem; }
-    .featured-title { font-size: 1.5rem; line-height: 1.2; }
-    .featured-sub { font-size: 0.9rem; line-height: 1.2; }
+  .featured-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
 
-    .modelo-reportaxe { padding: 0 0.8rem; font-size: 0.95rem; line-height: 1.5; }
-    .modelo-reportaxe-content h2 { font-size: 1.4rem; }
-    .modelo-reportaxe-content p { font-size: 0.9rem; line-height: 1.4; }
+  .featured-sub {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
 
-    .search-container input,
-    .page-green.contacto .contact-form input,
-    .page-green.contacto .contact-form textarea,
-    .page-green.contacto .contact-form button { padding: 0.8rem; font-size: 0.9rem; }
-}
 
 /* seccións pequenas de axuste */
 .modelo-reportaxe .container { padding: 0 1rem; margin: 0 auto; }
