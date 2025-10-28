@@ -469,6 +469,6 @@ footer .copyright { text-align: center; font-size: 0.9rem; }
 
 
 /* seccións pequenas de axuste */
-.modelo-reportaxe .container { padding: 0 1rem; margin: 0 auto; }
+.modelo-reportaxe .container { padding: 0rem; margin: 0 auto; }
 .modelo-reportaxe-content h2 { font-size: 1.4rem; }
 .modelo-reportaxe-content p { font-size: 0.9rem; line-height: 1.4; }
